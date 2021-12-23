@@ -17,7 +17,8 @@ public class GamblingSimulator {
         }
     }
   
-    public void GamblingSimulatorUC3(int margin_perct){
+    public void GamblingSimulatorUC3(){
+       int margin_perct=0;
         double uppr_margin = INITIAL_BET_STAKE + margin_perct*INITIAL_BET_STAKE/100;
         double lowr_margin = INITIAL_BET_STAKE - margin_perct*INITIAL_BET_STAKE/100;
         double avail_amt = INITIAL_BET_STAKE;
@@ -198,6 +199,8 @@ public class GamblingSimulator {
     public static void main(String []args){
         GamblingSimulator gs2 = new GamblingSimulator();
         gs2.GamblingSimulatorUC2();
+       GamblingSimulator gs3 = new GamblingSimulator();
+        gs3.GamblingSimulatorUC3();
         GamblingSimulator gs4 = new GamblingSimulator();
         gs4.GamblingSimulatorUC4();
         GamblingSimulator gs5 = new GamblingSimulator();
